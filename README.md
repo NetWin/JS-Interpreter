@@ -1,6 +1,5 @@
-# Deprecation Note:
-
-This module is going to depcrecation mode unless someone else picks up the development.
+# Note
+This is a fork of https://github.com/mercmobily/JS-Interpreter which itself is a wrapper around the original [js-interpreter](https://github.com/NeilFraser/JS-Interpreter) written by Neil Fraser. This repo / package attempts to keep these two repositories in sync.
 
 JS Interpreter
 ==============
@@ -44,7 +43,7 @@ js-interpreter path/to/my/file.js
 or
 
 ```
-echo 'console.log(1 + 2)' | js-interpreter 
+echo 'console.log(1 + 2)' | js-interpreter
 ```
 
 # Update
