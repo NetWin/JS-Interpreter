@@ -1,3 +1,3 @@
-import { Interpreter } from '../original-repo/interpreter';
+import { Interpreter } from '../original-repo/acorn_interpreter';
 
 export default Interpreter;
