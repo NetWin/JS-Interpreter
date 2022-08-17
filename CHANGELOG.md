@@ -8,6 +8,14 @@ breaking changes.
 The version is chosen based on the type of changes according to the
 [semver](https://semver.org/) guidelines.
 
+## [2.4.0] - 2022-08-17
+
+Commit: [c4c5736](https://github.com/NeilFraser/JS-Interpreter/commit/c4c573680307025a5e18fa95d1d97e076a04b2bb)
+### Fixes
+- Fixed an issue where code executed via Function constructor would cause a crash. ([#217](https://github.com/NeilFraser/JS-Interpreter/issues/217))
+### Features
+- Performance improvements ([607890b](https://github.com/NeilFraser/JS-Interpreter/commit/607890b8712b13bcaa7fc95c493c5df370ee097f), [036ffcd](https://github.com/NeilFraser/JS-Interpreter/commit/036ffcd482eb2f1992ec555d54cb89ffffc3b286))
+
 ## [2.3.1] - 2021-08-11
 
 Commit: [054c7d4](https://github.com/NeilFraser/JS-Interpreter/tree/054c7d4)
