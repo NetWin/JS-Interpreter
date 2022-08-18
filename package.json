@@ -1,6 +1,6 @@
 {
   "name": "@netwin/js-interpreter",
-  "version": "2.4.1-rc.3",
+  "version": "2.5.0",
   "description": "NPM package for https://github.com/NeilFraser/JS-Interpreter",
   "main": "lib/js-interpreter.min.js",
   "module": "lib/js-interpreter.js",
@@ -13,7 +13,7 @@
     "prebuild": "npm run clean",
     "build": "webpack --config webpack.config.js",
     "syntax": "eslint src",
-    "prepublish": "webpack && npm run build"
+    "prepublishOnly": "webpack && npm run build"
   },
   "repository": {
     "type": "git",

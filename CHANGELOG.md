@@ -8,6 +8,23 @@ breaking changes.
 The version is chosen based on the type of changes according to the
 [semver](https://semver.org/) guidelines.
 
+## [2.5.0] - 2022-08-18
+### Featues
+- Changed export from default to named
+  ```ts
+    // from
+    import Interpreter from '...';
+    // to
+    import { Interpreter } from '...';
+  ```
+- Migrated to typescript (added webpack config / ts-loader)
+- Added (incomplete) types for the JSInterpreter and JSInterpreterScope
+  ```ts
+    import { Interpreter, JSInterpreter, JSInterpreterScope } from '...';
+  ```
+  _(I'll probably remove the `JSInterpreter` interface in the future. The typed `Interpreter` should be enough)_
+
+
 ## [2.4.0] - 2022-08-17
 
 Commit: [c4c5736](https://github.com/NeilFraser/JS-Interpreter/commit/c4c573680307025a5e18fa95d1d97e076a04b2bb)
