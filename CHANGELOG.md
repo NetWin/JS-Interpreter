@@ -8,6 +8,11 @@ breaking changes.
 The version is chosen based on the type of changes according to the
 [semver](https://semver.org/) guidelines.
 
+
+## [2.5.1] - 2022-08-25
+### Features
+  - Added `REGEXP_MODE` property to `JSInterpreter` type
+
 ## [2.5.0] - 2022-08-18
 ### Featues
 - Changed export from default to named
