@@ -27,4 +27,15 @@ export interface JSInterpreter {
    */
   run(): void;
 
+  /**
+   * Some pathological regular expressions can take geometric time.
+   * Regular expressions are handled in one of three ways:
+   * - 0 = throw as invalid.
+   * - 1 = execute natively (risk of unresponsive program).
+   * - 2 = execute in separate thread (not supported by IE 9).
+   *
+   * @see https://neil.fraser.name/software/JS-Interpreter/demos/regexp.html
+   */
+  REGEXP_MODE: 0 | 1 | 2;
+
 }
