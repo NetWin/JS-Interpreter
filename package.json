@@ -1,6 +1,6 @@
 {
   "name": "@netwin/js-interpreter",
-  "version": "2.5.1",
+  "version": "2.6.0-rc.1",
   "description": "NPM package for https://github.com/NeilFraser/JS-Interpreter",
   "main": "./dist/esbuild-cjs/js-interpreter.js",
   "module": "./dist/esbuild-esm/js-interpreter.js",
