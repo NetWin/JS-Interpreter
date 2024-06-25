@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "moduleResolution": "node",
-    "module": "commonjs",
-    "target": "ES2015",
+    "moduleResolution": "Bundler",
+    "module": "ES2022",
+    "target": "ES2022",
     "strict": true,
     "noImplicitAny": true,
     "noImplicitOverride": true,
@@ -11,11 +11,11 @@
     "declaration": true,
     "sourceMap": true,
     "rootDir": "./src",
-    "outDir": "./lib",
+    "outDir": "./dist",
     "baseUrl": "./src"
   },
   "files": [
-    "./src/js-interpreter.ts"
+    "./src/index.ts"
   ],
   "exclude": [
     "node_modules"

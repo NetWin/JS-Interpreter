@@ -2,18 +2,27 @@
   "name": "@netwin/js-interpreter",
   "version": "2.5.1",
   "description": "NPM package for https://github.com/NeilFraser/JS-Interpreter",
-  "main": "lib/js-interpreter.min.js",
-  "module": "lib/js-interpreter.js",
-  "types": "lib/js-interpreter.d.ts",
+  "main": "./dist/esbuild-cjs/js-interpreter.js",
+  "module": "./dist/esbuild-esm/js-interpreter.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esbuild-esm/js-interpreter.js",
+      "require": "./dist/esbuild-cjs/js-interpreter.js"
+    }
+  },
   "files": [
-    "lib"
+    "dist"
   ],
   "scripts": {
-    "clean": "rimraf lib",
+    "clean": "rimraf dist",
     "prebuild": "npm run clean",
-    "build": "webpack --config webpack.config.js",
-    "syntax": "eslint src",
-    "prepublishOnly": "webpack && npm run build"
+    "build:esm": "npm run build:base -- --format=esm  --outfile=./dist/esbuild-esm/js-interpreter.js",
+    "build:node": "npm run build:base -- --format=cjs  --outfile=./dist/esbuild-cjs/js-interpreter.js",
+    "build:base": "esbuild ./src/js-interpreter.ts --tsconfig=tsconfig.json --bundle --sourcemap --minify",
+    "build:tsc": "tsc --declaration --emitDeclarationOnly",
+    "build": "npm run build:esm && npm run build:node && npm run build:tsc",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -26,13 +35,9 @@
   },
   "homepage": "https://github.com/netwin/JS-Interpreter#readme",
   "devDependencies": {
-    "@types/node": "^16",
-    "eslint": "^8.22.0",
-    "eslint-plugin-import": "^2.26.0",
-    "ts-loader": "^9.3.1",
-    "rimraf": "^3.0.2",
-    "typescript": "^4.7.4",
-    "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0"
+    "@types/node": "^20.14.8",
+    "esbuild": "^0.21.5",
+    "rimraf": "^5.0.7",
+    "typescript": "^5.5.2"
   }
 }
