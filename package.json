@@ -19,7 +19,7 @@
     "prebuild": "npm run clean",
     "build:esm": "npm run build:base -- --format=esm  --outfile=./dist/esbuild-esm/js-interpreter.js",
     "build:node": "npm run build:base -- --format=cjs  --outfile=./dist/esbuild-cjs/js-interpreter.js",
-    "build:base": "esbuild ./src/js-interpreter.ts --tsconfig=tsconfig.json --bundle --sourcemap --minify",
+    "build:base": "esbuild ./src/index.ts --tsconfig=tsconfig.json --bundle --sourcemap --minify",
     "build:tsc": "tsc --declaration --emitDeclarationOnly",
     "build": "npm run build:esm && npm run build:node && npm run build:tsc",
     "prepublishOnly": "npm run build"
